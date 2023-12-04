@@ -1,0 +1,202 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: 55px 1fr;
+    grid-template-areas:
+    "header header" 
+    "sidebar main"
+    "sidebar main";
+}
+
+/* ---------- sidebar ------------ */
+.sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    width: 250px;
+    padding: 80px 0 20px 0;
+    color: #fff;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); */
+    position: fixed;
+    background-color: #3498db;
+}
+
+.sidebar img{
+    display: block;
+    margin: 0 auto;
+    width: 125px;
+}
+
+
+.sidebar p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.userPicture {
+    border-radius: 30px;
+}
+
+
+/* ---------- Main -------------- */
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 450px;
+    grid-template-areas: 
+    "assignment grade"
+    "subject subject";
+    height: 100%;
+    background-color: #DADDE2;
+    padding: 20px
+}
+
+.main h1 {
+    text-align: center;
+    margin-top: 200px;
+}
+
+/* -------- header ----------- */
+header {
+    grid-area: header;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    z-index: 2;
+}
+
+header a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px 18px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+header a:hover {
+    background-color: #3498db;
+    color: #F5F5F5;
+}
+
+header nav span {
+    float: left;
+    padding: 20px 5px 10px 15px;
+}
+
+.homeIcon {
+    width: 25px;
+}
+
+
+/* ---------- subject ------------- */
+.subject {
+    grid-area: subject;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.subject:hover {
+    transform: scale(1.03);
+}
+
+/* --------------- assignment ---------------- */
+.assignment {
+    grid-area: assignment;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 100px;
+    gap: 10px;
+    color: black;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin: 10px 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  .assignmentContainer {
+      grid-area: assignment;
+      transition: transform 0.3s ease-in-out;
+  }
+.assignmentContainer:hover {
+    transform: scale(1.05);
+}
+
+  
+  .header, .item {
+    padding: 8px;
+  }
+  
+  .header {
+    background-color: #3498db;
+    border-radius: 20px;
+    text-align: center;
+    height: 25px;
+    margin: 5px;
+  }
+
+  .grade {
+    grid-area: grade;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: none;
+    padding: 10px;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.card-body {
+    padding: 20px;
+    width: 500px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
